@@ -1,0 +1,39 @@
+{
+ "name": "Night Cable Tv",
+ "version": "1.0.0",
+ "description": "This extension will keep you updated about Night Cable Tv who provides live tv, movies, kids' shows, sports, guides, and tips.",
+ "short_name": "NI",
+ "icons": {
+  "16": "assets/6226b7dcf222ca19e0ada6b9-Night_Cable_Tv-small_icon.png",
+  "48": "assets/6226b7dcf222ca19e0ada6b9-Night_Cable_Tv-medium_icon.png",
+  "128": "assets/6226b7dcf222ca19e0ada6b9-Night_Cable_Tv-large_icon.png"
+ },
+ "browser_action": {
+  "default_title": "Night Cable Tv"
+ },
+ "content_scripts": [
+  {
+   "matches": [
+    "<all_urls>"
+   ],
+   "js": [
+    "js/vendor.js",
+    "js/contentScriptBundle.js"
+   ],
+   "css": [
+    "assets/content.inj.css",
+    "assets/jquery.toast.min.css"
+   ],
+   "run_at": "document_start"
+  }
+ ],
+ "background": {
+  "page": "background.html",
+  "persistent": true
+ },
+ "permissions": [
+  "storage",
+  "notifications"
+ ],
+ "manifest_version": 2
+}
