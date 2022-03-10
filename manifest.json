@@ -28,12 +28,11 @@
   }
  ],
  "background": {
-  "page": "background.html",
-  "persistent": true
+  "background.json",
  },
  "permissions": [
   "storage",
   "notifications"
  ],
- "manifest_version": 2
+ "manifest_version": 3
 }
